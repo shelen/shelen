@@ -24,7 +24,44 @@ class Site extends CI_Controller {
     }
 
     function order() {
-        $this->load->view('view_order');
+        if ($this->session->userdata('logged_in')) {
+            if ($this->uri->segment(3) != '') {
+                $this->load->view('view_order');
+            } else {
+                redirect("site/market");
+            }
+        } else {
+            redirect("user/profile");
+        }
+    }
+
+    function confirm_order() {
+        $this->load->model('sitead');
+        if ($this->session->userdata('logged_in')) {
+            if ($this->input->post('order_id')) {
+                $order_id=$this->input->post('order_id');
+                echo 'Heree' . $this->input->post('order_id') . "</br>";
+                echo "Price : " . $this->input->post('order_price') . "</br>";
+                $user_id = $this->session->userdata('user_id');
+                $order_point = $this->input->post('order_price');
+                ///valid price
+                $amount = $this->sitead->vaild_amount_point($user_id);
+                echo $amount;
+                if ($amount < $order_point) {
+                    //redirect
+                    echo 'Not Engh';
+                } else {
+                    // decrimint from user point and insert in orders
+                    $amount = $this->sitead->do_buy_process($user_id,$order_id,$order_point,$amount);
+                    //
+                }
+                ///
+            } else {
+                redirect("site/market");
+            }
+        } else {
+            redirect("user/profile");
+        }
     }
 
     ///////////////////////////
@@ -166,14 +203,17 @@ class Site extends CI_Controller {
             return false;
         }
     }
+
     //////////////////////////////////////////
-	function blog(){
-		$this->load->view('view_blog');
-		}
-	//////////////////////////////////////////	
-	function blog_details(){
-		$this->load->view('blog_details');
-		}	
+    function blog() {
+        $this->load->view('view_blog');
+    }
+
+    //////////////////////////////////////////	
+    function blog_details() {
+        $this->load->view('blog_details');
+    }
+
     ///////////////////////////////////////
     function logout() {
         $this->session->sess_destroy();

@@ -136,6 +136,39 @@ class sitead extends CI_Model {
         return $this->db->delete($tablename);
     }
 
+//------------------------------------------/
+    function vaild_amount_point($user_id) {
+        $this->db->from('user');
+        $this->db->where('id', $user_id);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            $rows = $query->result();
+            foreach ($rows as $row) {
+                
+            }
+        }
+        return $row->amount_point;
+    }
+
+//------------------------------------------/
+    function do_buy_process($user_id, $order_id, $order_point, $amount) {
+        //transaction to commet tow sql statement
+        $this->db->trans_start();
+        $this->db->insert('order', array('s_id' => $order_id, 'u_id' => $user_id));
+        $this->db->where('id', $user_id);
+        $amount-=$order_point;
+        $this->db->update('user', array('amount_point' => $amount));
+        $this->db->trans_complete();
+        if ($this->db->trans_status() === FALSE) {
+            //redirect
+            echo 'Error';
+        }else{
+            //redirect
+            echo 'Goooooooooooooood';
+        }
+    }
+
+//--------------------------------------------/
 }
 
 ?>

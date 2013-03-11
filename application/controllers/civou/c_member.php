@@ -3,7 +3,7 @@
 class c_employee extends CI_Controller {
 
     function loadAddemployee() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->view('civou/view_addemployee');
         } else {
             $this->load->view('civou/view_login');
@@ -33,7 +33,8 @@ class c_employee extends CI_Controller {
             if ($this->sitead->addemployee($data)) {
                 $message = array("mes" => "تم أضافة " . $username . " .");
 //                unset($this->input->post('categoryname'));
-                $this->load->view('civou/view_allemployee');
+//                $this->load->view('civou/view_allemployee');
+                redirect('civou/c_member/allemployee');
 //                $this->load->view('civou/view_addadmin', $message);
 //                $this->loadAddCategory();
             } else {
@@ -45,7 +46,7 @@ class c_employee extends CI_Controller {
     }
 
     function allemployee() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->view('civou/view_allemployee');
         } else {
             $this->load->view('civou/view_login');
@@ -53,12 +54,13 @@ class c_employee extends CI_Controller {
     }
 
     function delete() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->model('sitead');
             if ($this->uri->segment(4) != '') {
                 $id = $this->uri->segment(4);
                 if ($this->sitead->delete($id, 'employee')) {
-                    $this->load->view('civou/view_allemployee');
+//                    $this->load->view('civou/view_allemployee');
+                    redirect('civou/c_member/allemployee');
                 } else {
                     
                 }

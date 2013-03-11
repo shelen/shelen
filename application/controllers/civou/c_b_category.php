@@ -3,7 +3,7 @@
 class c_b_category extends CI_Controller {
 
     function loadAddBCategory() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->view('civou/view_addblogcategory');
         } else {
             $this->load->view('civou/view_login');

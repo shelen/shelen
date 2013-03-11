@@ -7,7 +7,7 @@ class c_sitead extends CI_Controller {
     }
 
     public function login() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->view('civou/view_admin');
         } else {
             $this->load->view('civou/view_login');
@@ -19,7 +19,7 @@ class c_sitead extends CI_Controller {
     }
 
     public function is_loged_in() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->view('civou/view_admin');
         } else {
             $this->load->view('civou/view_login');
@@ -42,7 +42,7 @@ class c_sitead extends CI_Controller {
                 $login_data = array("login_error" => true);
                 $this->load->view('civou/view_login', $login_data);
             } else {
-                $login_data = array("logged_in" => true, "user_id" => $user_id);
+                $login_data = array("admin_logged_in" => true, "user_id" => $user_id);
                 $this->session->set_userdata($login_data);
                 $this->is_loged_in();
             }

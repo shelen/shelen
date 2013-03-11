@@ -3,7 +3,7 @@
 class c_subcategory extends CI_Controller {
 
     function loadAddSubCategory() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->view('civou/view_addsubcategory');
         } else {
             $this->load->view('civou/view_login');
@@ -28,7 +28,8 @@ class c_subcategory extends CI_Controller {
             } else {
                 if ($this->sitead->addsubcategory($categoryname, $categoryid)) {
                     $message = array("mes" => "تم أضافة " . $categoryname . " .");
-                    $this->load->view('civou/view_addsubcategory', $message);
+//                    redirect('civou/c_subcategory/addSubCategory');
+                    redirect('civou/c_subcategory/showall');
                 } else {
                     $message = array("mes" => "لقد حدثت مشكله فى الاضافه .");
                     $this->load->view('civou/view_addsubcategory', $message);
@@ -38,7 +39,7 @@ class c_subcategory extends CI_Controller {
     }
 
     function showall() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->view('civou/view_allsubcategory');
         } else {
             $this->load->view('civou/view_login');
@@ -46,12 +47,13 @@ class c_subcategory extends CI_Controller {
     }
 
     function delete() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->model('sitead');
             if ($this->uri->segment(4) != '') {
                 $id = $this->uri->segment(4);
                 if ($this->sitead->delete($id, 'sub_categ')) {
-                    $this->load->view('civou/view_allsubcategory');
+//                    $this->load->view('civou/view_allsubcategory');
+                    redirect('civou/c_subcategory/showall');
                 } else {
                     
                 }

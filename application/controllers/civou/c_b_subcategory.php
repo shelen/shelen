@@ -3,7 +3,7 @@
 class c_b_subcategory extends CI_Controller {
 
     function loadAddbSubCategory() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->view('civou/view_addblogsubcategory');
         } else {
             $this->load->view('civou/view_login');

@@ -3,7 +3,7 @@
 class c_service extends CI_Controller {
 
     function loadAddService() {
-        if ($this->session->userdata('logged_in')) {
+        if ($this->session->userdata('admin_logged_in')) {
             $this->load->view('civou/view_addservice');
         } else {
             $this->load->view('civou/view_login');
@@ -46,6 +46,7 @@ class c_service extends CI_Controller {
             if ($this->sitead->addservice($data)) {
                 $message = array("mes" => "تم أضافة الخدمة");
                 $this->load->view('civou/view_addservice', $message);
+                redirect("civou/c_service/loadaddservice");
             } else {
                 $message = array("mes" => "لقد حدثت مشكله فى الاضافه .");
                 $this->load->view('civou/view_addservice', $message);

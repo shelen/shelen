@@ -32,7 +32,33 @@
                                     ?>
                                     <tr>
                                         <td><h6><?php echo $row->name; ?></h6></td>
-                                        <td style="width: 250px;"></td>
+                                        <td style="width: 100px;"></td>
+                                        <?php
+                                        $this->db->where('id', $row->c_id);
+                                        $this->db->from('category');
+                                        $queryy = $this->db->get();
+                                        if ($queryy->num_rows() > 0) {
+                                            $rowss = $queryy->result();
+                                            foreach ($rowss as $roww) {
+                                                ?>
+                                                <td style="width: 100px;"><?php echo $roww->name; ?></td>
+                                                <?php
+                                            }
+                                        }
+                                        ?>
+                                        <?php
+                                        $this->db->where('id', $row->sc_id);
+                                        $this->db->from('sub_categ');
+                                        $queryy = $this->db->get();
+                                        if ($queryy->num_rows() > 0) {
+                                            $rowss = $queryy->result();
+                                            foreach ($rowss as $roww) {
+                                                ?>
+                                                <td style="width: 100px;"><?php echo $roww->name; ?></td>
+                                                <?php
+                                            }
+                                        }
+                                        ?>
                                         <td><h6><a style="color: #1a1a1a;" href="<?php echo base_url(); ?>civou/c_employee/delete/<?php echo $row->id; ?>">Delete</a></h6></td>
                                     </tr>
 
