@@ -161,10 +161,20 @@ class sitead extends CI_Model {
         $this->db->trans_complete();
         if ($this->db->trans_status() === FALSE) {
             //redirect
-            echo 'Error';
-        }else{
+            $data = array(
+                'title' => 'خطاء',
+                'mesg' => 'خطاء أثناء  العملية'
+            );
+            $this->load->view('message', $data);
+//            echo 'Error';
+        } else {
             //redirect
-            echo 'Goooooooooooooood';
+//            echo 'Goooooooooooooood';
+            $data = array(
+                'title' => 'تم بنجاح',
+                'mesg' => 'تمت عملية الشراء بنجاح'
+            );
+            $this->load->view('message', $data);
         }
     }
 

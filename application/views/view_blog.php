@@ -9,45 +9,9 @@
         <title>
             شيلينات دوت كوم  </title>
 
-
-
-
-
-        <!--[if IE 8]>
-        <link href="ie8-media.css" tppabs="http://demo.themeskingdom.com/dreamy/wp-content/themes/dreamy/style/ie8-media.css" media="screen and (min-width: 250px;)" rel="stylesheet"/>
-        <![endif]-->
-
         <?php include 'tempelet/links.php'; ?>
 
-
     </head>
-<style type="text/css">
-
-.blog-one{float:right;text-align:right;font-family:myfont2;font-size:15px;padding-right:5px;height:10px;}
-#user:hover{text-decoration:underline}
-.form-textarea textarea {
-    float: right;
-    color: #d1d1d1;
-	text-align:right;
-    font: 14px/1.6em myfont2;
-    background-color: #fff;
-    border: 1px solid #e7e4d5;
-    width: 548px;
-    height: 100px;
-    padding: 15px;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -o-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-transform: translateZ(0);
-}
-table tr td {padding:0px;}
-</style>
     <body class="page page-id-9 page-template page-template-_contact-php">
 
 
@@ -99,7 +63,7 @@ table tr td {padding:0px;}
                     <div class="wrapper">
                         <div class="title-pages left" style="font-family:myfont;text-transform:capitalize"> المدونه</div><!--/wrapper-->
                         <div class="breadcrumbs-content"><ul>
-                               <li>المدونه</li> <li><a href="<?php echo base_url(); ?>site/"> الرئيسيه</a></li>  <li style="background: none; padding: 0;">: انت في</li>
+                                <li>المدونه</li> <li><a href="<?php echo base_url(); ?>site/"> الرئيسيه</a></li>  <li style="background: none; padding: 0;">: انت في</li>
 
                             </ul>
                         </div>            </div><!--/wrapper-->
@@ -107,124 +71,98 @@ table tr td {padding:0px;}
                 <div class="bg-blue-down left"></div><!--/bg-blue-down-->
             </div><!--/blue-page-->
 
-
-
-
-
-
             <!-- CONTENT -->
             <div class="content left">
                 <div class="wrapper">
 
                     <div class="left-page left">
-         <!---------------------------------------->     
-                <div id="blog_box">
-                <div class="gallery-home-images-content left" style="float:right">
-                <div class="gallery-home-images left"> 
-                <img src="<?php echo base_url(); ?>images/ga5-176x151.jpg"  class="attachment-gallery-front wp-post-image" />
-                 <a href="<?php echo base_url();?>site/blog_details" >
-                        <p></p>
-                    </a> 
-                    </div>
-                <!--/gallery-home-images--> 
-                   
-                </div>
- 
- 
-    <h4 id="blog_name"><a href="<?php echo base_url();?>site/blog_details" >تصميم بنارات بجميع المقاسات </a></h4>
-  
-  
-  <div id="clear"></div>
- 
- <p id="blog_desc">
-                    بقيت حاوي، بقيت غاوي ف عز الجرح أنا مبكيش
-                    بقيت عارف، أطلع من ضلوع الفقر لقمه عيش
-                    بقيت قادر، أداري الدمعة جوايا مبينهاش
-                    بقيت راضي، أنام رجليا مقلوبه كما الخفاش
-                    مأنا أتعودت أحلامي، اشوفها 
-                    </p>
+                        <!---------------------------------------->
+                        <!--                        <div id="blog_box">
+                                                    <div class="gallery-home-images-content left" style="float:right">
+                                                        <div class="gallery-home-images left"> 
+                                                            <img src="<?php echo base_url(); ?>images/ga5-176x151.jpg"  class="attachment-gallery-front wp-post-image" />
+                                                            <a href="<?php echo base_url(); ?>site/blog_details" >
+                                                                <p></p>
+                                                            </a> 
+                                                        </div>
+                                                        /gallery-home-images 
+                                                    </div>
+                        
+                                                    <h4 id="blog_name"><a href="<?php echo base_url(); ?>site/blog_details" >name</a></h4>
+                        
+                                                    <div id="clear"></div>
+                                                    <p id="blog_desc">disc</p>
+                        
+                                                </div>-->
+                        <!---------------------------------------->
 
-                    
-                    
-                    </div>
-        <!----------------------------------------> 
-         <!---------------------------------------->     
-                <div id="blog_box">
-                <div class="gallery-home-images-content left" style="float:right">
-                <div class="gallery-home-images left"> 
-                <img src="<?php echo base_url(); ?>images/ga5-176x151.jpg"  class="attachment-gallery-front wp-post-image" />
-                 <a href="#" >
-                        <p></p>
-                    </a> 
-                    </div>
-                <!--/gallery-home-images--> 
-                   
-                </div>
-                <div id="clear"></div>
-                    <h4 id="blog_name"><a href="#" >تصميم بنارات بجميع المقاسات </a></h4> 
-                    <p id="blog_desc">
-                    بقيت حاوي، بقيت غاوي ف عز الجرح أنا مبكيش
-                    بقيت عارف، أطلع من ضلوع الفقر لقمه عيش
-                    بقيت قادر، أداري الدمعة جوايا مبينهاش
-                    بقيت راضي، أنام رجليا مقلوبه كما الخفاش
-                    مأنا أتعودت أحلامي، اشوفها 
-                    </p>
-                    </div>
-        <!----------------------------------------> 
-        
-         <!---------------------------------------->     
-                <div id="blog_box">
-                <div class="gallery-home-images-content left" style="float:right">
-                <div class="gallery-home-images left"> 
-                <img src="<?php echo base_url(); ?>images/ga5-176x151.jpg"  class="attachment-gallery-front wp-post-image" />
-                 <a href="#" >
-                        <p></p>
-                    </a> 
-                    </div>
-                <!--/gallery-home-images--> 
-                   
-                </div>
-                <div id="clear"></div>
-                    <h4 id="blog_name"><a href="#" >تصميم بنارات بجميع المقاسات </a></h4> 
-                    <p id="blog_desc">
-                    بقيت حاوي، بقيت غاوي ف عز الجرح أنا مبكيش
-                    بقيت عارف، أطلع من ضلوع الفقر لقمه عيش
-                    بقيت قادر، أداري الدمعة جوايا مبينهاش
-                    بقيت راضي، أنام رجليا مقلوبه كما الخفاش
-                    مأنا أتعودت أحلامي، اشوفها 
-                    </p>
-                    </div>
-        <!----------------------------------------> 
-         <!---------------------------------------->     
-                <div id="blog_box">
-                <div class="gallery-home-images-content left" style="float:right">
-                <div class="gallery-home-images left"> 
-                <img src="<?php echo base_url(); ?>images/ga5-176x151.jpg"  class="attachment-gallery-front wp-post-image" />
-                 <a href="#" >
-                        <p></p>
-                    </a> 
-                    </div>
-                <!--/gallery-home-images--> 
-                   
-                </div>
-                <div id="clear"></div>
-                    <h4 id="blog_name"><a href="#" >تصميم بنارات بجميع المقاسات </a></h4> 
-                    <p id="blog_desc">
-                    بقيت حاوي، بقيت غاوي ف عز الجرح أنا مبكيش
-                    بقيت عارف، أطلع من ضلوع الفقر لقمه عيش
-                    بقيت قادر، أداري الدمعة جوايا مبينهاش
-                    بقيت راضي، أنام رجليا مقلوبه كما الخفاش
-                    مأنا أتعودت أحلامي، اشوفها 
-                    </p>
-                    </div>
-        <!----------------------------------------> 
-                   
-                 </div>
-                <!--/gal
+                        <?php
+//                        $this->load->model('sitead');
+                        if ($this->uri->segment(3) != '' && $this->uri->segment(4) != '') {
+                            $c_id = $this->uri->segment(3);
+                            $sc_id = $this->uri->segment(4);
+                            $this->db->from('service');
+                            $this->db->where('sc_id', $sc_id);
+                            $query = $this->db->get();
+                        } else if ($this->uri->segment(3) != '') {
+                            $c_id = (int) $this->uri->segment(3);
+                            $this->db->from('service');
+                            $this->db->where('c_id', $c_id);
+                            $query = $this->db->get();
+                        } else {
+                            $query = $this->db->get('topic');
+                        }
+                        if (isset($query)) {
+                            if ($query->num_rows() > 0) {
+                                $rows = $query->result();
+                                foreach ($rows as $row) {
+                                    ?>
+                                    <div id="blog_box">
+                                        <div class="gallery-home-images-content left" style="float:right">
+                                            <div class="gallery-home-images left">
+                                                <p><?php echo $row->title; ?></p>
+                                                <img src="<?php echo base_url(); ?>images/profile/thumb_profile/<?php echo $row->t_photo_name; ?>"  class="attachment-gallery-front wp-post-image" />
+                                                <a href="<?php echo base_url(); ?>site/blog_details/<?php echo $row->id; ?>" >
+                                                    <p><?php echo $row->title; ?></p>
+                                                </a> 
+                                            </div>
+                                            <!--/gallery-home-images--> 
+                                        </div>
+                                        <div id="clear"></div>
+                                        <p id="blog_desc">
 
-                    </div><!--/wrapper-->
+                                            <p>
+                                                <?php
+                                                $this->db->from('user');
+                                                $this->db->where('id', $row->user_id);
+                                                $user_query = $this->db->get();
+                                                if ($user_query->num_rows() > 0) {
+                                                    $user_rows = $user_query->result();
+                                                    foreach ($user_rows as $user_row) {
+                                                        ?>
+                                                        <p>تمت اضافته بواسطة <?php echo $user_row->username; ?></p>
+                                                        <?php
+                                                    }
+                                                }
+                                                ?>
+                                            </p>
+                                            <?php echo $row->content; ?>
+                                        </p>
+
+                                    </div>
 
 
+                                    <?php
+                                }
+                            }
+                        }
+                        ?>
+
+                        <!----------------------------------------------->
+
+                    </div>
+                    <!--/gal
+    
                     <!--SIDEBAR-->
                     <div class="bg-sidebar right">
                         <div class="sidebar-top left"></div><!--/sidebar-top-->
@@ -238,54 +176,23 @@ table tr td {padding:0px;}
                             <div class="sidebar_widget_holder">
 
 
-                                <?php include 'tempelet/main_menu.php'; ?>
+                                <?php include 'tempelet/blog_menu.php'; ?>
 
 
                                 <div id="clear"></div>
                                 <?php include 'tempelet/most_buy.php'; ?>
-
-                                <div id="clear"></div>
-                                <?php include 'tempelet/most_buy.php'; ?>
-                                <!-- slide wrap -->
                             </div>
-
-
-
-                            <script type="text/javascript">
-                                jQuery(document).ready(function($){
-
-                                    jQuery('.slide-wrap').flexslider({
-                                        animation: 'fade',                         
-                                        slideshow: false,
-                                        useCSS: true,
-                                        controlNav: false,
-                                        prevText: "Prev",
-                                        nextText: "Next"
-                        
-                                    });
-                                });
-
-
-                            </script></div><!--/#sidebar-->
+                        </div><!--/#sidebar-->
                         <div class="sidebar-down left"></div><!--/sidebar-down-->
                     </div><!--/bg-sidebar-->
 
                 </div>
             </div><!--/content-->
 
-
-
-
-
             <?php include('footer.php'); ?>
-
-
 
         </div>
         </div>
         <!--/container--> 
-
-        <!-- Generated in 0.401 seconds. Made 34 queries to database and 29 cached queries. Memory used - 20.35MB --> 
-        <!-- Cached by DB Cache Reloaded Fix -->
     </body>
 </html>

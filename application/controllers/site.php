@@ -40,16 +40,21 @@ class Site extends CI_Controller {
         if ($this->session->userdata('logged_in')) {
             if ($this->input->post('order_id')) {
                 $order_id=$this->input->post('order_id');
-                echo 'Heree' . $this->input->post('order_id') . "</br>";
-                echo "Price : " . $this->input->post('order_price') . "</br>";
+//                echo 'Heree' . $this->input->post('order_id') . "</br>";
+//                echo "Price : " . $this->input->post('order_price') . "</br>";
                 $user_id = $this->session->userdata('user_id');
                 $order_point = $this->input->post('order_price');
                 ///valid price
                 $amount = $this->sitead->vaild_amount_point($user_id);
-                echo $amount;
+//                echo $amount;
                 if ($amount < $order_point) {
                     //redirect
-                    echo 'Not Engh';
+//                    echo 'Not Engh';
+                    $data=array(
+                        "title"=>'تم بنجاح',
+                        "mesg"=>'رصيدك لا يكفى لأتمام عملية الشراء'
+                    );
+                    $this->load->view('message',$data);
                 } else {
                     // decrimint from user point and insert in orders
                     $amount = $this->sitead->do_buy_process($user_id,$order_id,$order_point,$amount);

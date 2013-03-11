@@ -69,115 +69,98 @@
                 <div class="bg-blue-down left"></div><!--/bg-blue-down-->
             </div><!--/blue-page-->
 
-
-
-
-
-
             <!-- CONTENT -->
             <div class="content left">
                 <div class="wrapper">
 
                     <div class="left-page left">
 
-
-
-
-
-
                         <div class="contact-text shortcodes left">
-
-
                         </div><!--/contact-text-->
-
-
-
-
-
                         <!-- Validate script -->
-                      
-                        <!-- end of script -->
-                        
-<div class="form left">
-    <div class="gallery-home-content left" style="margin-left:-70px;left:0px;width:700px;">
 
-        <?php
+                        <!-- end of script -->
+
+                        <div class="form left">
+                            <div class="gallery-home-content left" style="margin-left:-70px;left:0px;width:700px;">
+
+                                <?php
 //                        $this->load->model('sitead');
-        if ($this->uri->segment(3) != '' && $this->uri->segment(4) != '') {
-            $c_id = $this->uri->segment(3);
-            $sc_id = $this->uri->segment(4);
-            $this->db->from('service');
-            $this->db->where('sc_id', $sc_id);
-            $query = $this->db->get();
-        } else if ($this->uri->segment(3) != '') {
-            $c_id = (int) $this->uri->segment(3);
-            $this->db->from('service');
-            $this->db->where('c_id', $c_id);
-            $query = $this->db->get();
-        } else {
-            $query = $this->db->get('service');
-        }
-        if (isset($query)) {
-            if ($query->num_rows() > 0) {
-                $rows = $query->result();
-                foreach ($rows as $row) {
-                    ?>
-                    <div class="gallery-home-one left">
-                        <div class="gallery-home-images-content left">
-                            <div class="gallery-home-images left"> <img src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $row->photo_name; ?>"  class="attachment-gallery-front wp-post-image" alt="ga5" title="ga5" />  </div>
+                                if ($this->uri->segment(3) != '' && $this->uri->segment(4) != '') {
+                                    $c_id = $this->uri->segment(3);
+                                    $sc_id = $this->uri->segment(4);
+                                    $this->db->from('service');
+                                    $this->db->where('sc_id', $sc_id);
+                                    $query = $this->db->get();
+                                } else if ($this->uri->segment(3) != '') {
+                                    $c_id = (int) $this->uri->segment(3);
+                                    $this->db->from('service');
+                                    $this->db->where('c_id', $c_id);
+                                    $query = $this->db->get();
+                                } else {
+                                    $query = $this->db->get('service');
+                                }
+                                if (isset($query)) {
+                                    if ($query->num_rows() > 0) {
+                                        $rows = $query->result();
+                                        foreach ($rows as $row) {
+                                            ?>
+                                            <div class="gallery-home-one left">
+                                                <div class="gallery-home-images-content left">
+                                                    <div class="gallery-home-images left"> <img src="<?php echo base_url(); ?>imagesService/thumb/<?php echo $row->photo_name; ?>"  class="attachment-gallery-front wp-post-image" alt="ga5" title="ga5" />  </div>
+                                                </div>
+                                                <div class="gallery-home-text left"><a href="<?php echo base_url() . "site/market_deatils/" . $row->id; ?>" style="font-family:myfont" ><?php echo $row->detail; ?></a></div>
+                                            </div>
+
+                                            <?php
+                                        }
+                                    }
+                                }
+                                ?>
+                            </div>
+                            <!--/gallery-home-one-->
+
                         </div>
-                        <div class="gallery-home-text left"><a href="<?php echo base_url() . "site/market_deatils/" . $row->id; ?>" style="font-family:myfont" ><?php echo $row->detail; ?></a></div>
+                        <!--/gallery-home-content--> 
+
                     </div>
 
-                    <?php
-                }
-            }
-        }
-        ?>
-    </div>
-    <!--/gallery-home-one-->
+                </div><!--/left-page-->
 
-</div>
-<!--/gallery-home-content--> 
-
-</div>
-
-                    </div><!--/left-page-->
-
-                    <!--SIDEBAR-->
-                    <div class="bg-sidebar right">
-                        <div class="sidebar-top left"></div><!--/sidebar-top-->
+                <!--SIDEBAR-->
+                <div class="bg-sidebar right">
+                    <div class="sidebar-top left"></div><!--/sidebar-top-->
 
 
-                        <div id="sidebar" class="right">
-                            <div class="sidebar_widget_holder">
-                                <form method="get"  class="submit-search-form" action="http://demo.themeskingdom.com/dreamy/">
-                                    <div class="search-wrap"><input type="text" name="s" class="search-input" onfocus="if(value==defaultValue)value=''" onblur="if(value=='')value=defaultValue" value=""/></div>
-                                    <div class="searchform-right left"><input type="submit" class="submit-button" value="" /></div>
-                                </form> </div>
-                            <div class="sidebar_widget_holder">
+                    <div id="sidebar" class="right">
+                        <div class="sidebar_widget_holder">
+                            <form method="get"  class="submit-search-form" action="http://demo.themeskingdom.com/dreamy/">
+                                <div class="search-wrap"><input type="text" name="s" class="search-input" onfocus="if(value==defaultValue)value=''" onblur="if(value=='')value=defaultValue" value=""/></div>
+                                <div class="searchform-right left"><input type="submit" class="submit-button" value="" /></div>
+                            </form> </div>
+                        <div class="sidebar_widget_holder">
 
 
-                                <?php include 'tempelet/main_menu.php'; ?>
+                            <?php include 'tempelet/main_menu.php'; ?>
 
 
-                                <div id="clear"></div>
-                                <?php include 'tempelet/most_buy.php'; ?>
+                            <div id="clear"></div>
+                            <?php include 'tempelet/most_buy.php'; ?>
 
-                                <div id="clear"></div>
-                                <?php include 'tempelet/most_buy.php'; ?>
-                                <!-- slide wrap -->
-                            </div>
+                            <div id="clear"></div>
+                            <?php include 'tempelet/most_buy.php'; ?>
+                            <!-- slide wrap -->
+                        </div>
 
-                        </div><!--/#sidebar-->
-                        <div class="sidebar-down left"></div><!--/sidebar-down-->
-                    </div><!--/bg-sidebar-->
+                    </div><!--/#sidebar-->
+                    <div class="sidebar-down left"></div><!--/sidebar-down-->
+                </div><!--/bg-sidebar-->
 
-                    <!------------------------------------------------>
+                <!------------------------------------------------>
 
-                </div><!--/wrapper-->
-            </div><!--/content-->
-            <?php include('footer.php'); ?>
+            </div><!--/wrapper-->
+        </div><!--/content-->
+        <?php include('footer.php'); ?>
         </div>
         </div>
         <!--/container--> 

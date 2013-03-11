@@ -7,7 +7,12 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
         <title>
-            شيلينات دوت كوم  </title>
+            <?php
+            if (isset($title)) {
+                echo $title;
+            }
+            ?>
+        </title>
 
         <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://demo.themeskingdom.com/dreamy/feed/" />
         <link rel="alternate" type="text/xml" title="RSS .92" href="http://demo.themeskingdom.com/dreamy/feed/rss/" />
@@ -242,8 +247,11 @@
                             <div class="latest-news-home-one left" style="float:right;text-align:right">
                                 <br />
                                 <div class="blog-single-text shortcodes left">
-                                    <p>
-                                        <?php include 'tempelet/order_confirm.php';?>
+                                    <p><?php
+                                if (isset($mesg)) {
+                                    echo $mesg;
+                                }
+                                ?>
                                     </p>
                                     <div id="clear"></div>
 
